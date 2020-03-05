@@ -1,4 +1,4 @@
-package exemplos;
+package exercicios;
 
 import org.junit.jupiter.api.Test;
 
@@ -18,6 +18,21 @@ public class QuadradoTeste {
         Quadrado q1 = new Quadrado();
         q1.lado = 10.0;
         assertNotNull(q1.lado);
+    }
+
+    @Test
+    public void metodoGetLado() {
+        Quadrado q1 = new Quadrado();
+        q1.lado = 10.0;
+        assertEquals(10.0, q1.getLado());
+    }
+
+    @Test
+    public void metodoSetLado() {
+        Quadrado q1 = new Quadrado();
+        q1.lado = 10.0;
+        q1.setLado(20.0);
+        assertEquals(20.0, q1.lado);
     }
 
     @Test
