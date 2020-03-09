@@ -1,8 +1,8 @@
 package exercicios;
 
 public class Retangulo {
-    public Double base;
-    public Double altura;
+    private Double base=0.0;
+    private Double altura=0.0;
 
     public Double getAltura() {
         return altura;
@@ -13,11 +13,17 @@ public class Retangulo {
     }
 
     public void setAltura(Double altura) {
-        this.altura = altura;
+        if (altura<=0) {
+            throw new IllegalArgumentException("A altura deve ser maior que zero.");
+        }
+        else this.altura = altura;
     }
 
     public void setBase(Double base) {
-        this.base = base;
+        if (base<=0) {
+            throw new IllegalArgumentException("A base deve ser maior que zero.");
+        }
+        else this.base = base;
     }
 
     public Double calcularArea(){

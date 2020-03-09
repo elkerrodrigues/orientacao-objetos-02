@@ -1,7 +1,7 @@
 package exercicios;
 
 public class Circulo {
-    private Double raio;
+    private Double raio=0.0;
 
     public Double getRaio() {
         return raio;
