@@ -1,14 +1,17 @@
 package exercicios;
 
 public class Quadrado {
-    public Double lado;
+    private Double lado;
 
     public Double getLado() {
         return lado;
     }
 
     public void setLado(Double lado) {
-        this.lado = lado;
+        if (lado<=0) {
+            throw new IllegalArgumentException("O lado deve ser maior que zero.");
+        }
+        else this.lado = lado;
     }
 
     public Double calcularArea() {
